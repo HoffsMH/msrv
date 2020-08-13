@@ -23,6 +23,25 @@ config :nerves, source_date_epoch: "1597271731"
 
 config :logger, backends: [RingLogger]
 
+config :vintage_net,
+  config: [
+    {"wlan0",
+      %{
+        type: VintageNetWiFi,
+        vintage_net_wifi: %{
+          networks: [
+            %{
+              key_mgmt: :wpa_psk,
+              ssid: "very nice mesh",
+              psk: "cat enjoys destroying furniture",
+            }
+          ]
+        },
+        ipv4: %{method: :dhcp},
+      }
+    }
+  ]
+
 if Mix.target() != :host do
   import_config "target.exs"
 end

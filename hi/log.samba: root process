@@ -1,0 +1,5 @@
+[2020/08/12 21:47:37.660464,  0] ../../source4/smbd/server.c:629(binary_smbd_main)
+  samba version 4.12.3 started.
+  Copyright Andrew Tridgell and the Samba Team 1992-2020
+[2020/08/12 21:47:37.660883,  0] ../../lib/util/become_daemon.c:121(exit_daemon)
+  exit_daemon: daemon failed to start: Failed to cleanup temporary files, error code 22
